@@ -7,7 +7,7 @@ import javax.inject.Inject
 
 class GlideImageLoader @Inject constructor(private val base_url: String) : ImageLoader {
 
-	private val mDefaultImageLoaderPlaceholder = R.drawable.abc_btn_default_mtrl_shape
+	private val mDefaultImageLoaderPlaceholder = R.mipmap.ic_launcher
 
 	override fun loadImageInto(targetImageView: ImageView) {
 		loadImageInto(mDefaultImageLoaderPlaceholder, targetImageView)

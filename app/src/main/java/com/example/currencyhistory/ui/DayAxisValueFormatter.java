@@ -4,12 +4,8 @@ import com.github.mikephil.charting.charts.BarLineChartBase;
 import com.github.mikephil.charting.formatter.ValueFormatter;
 
 import java.util.Calendar;
-import java.util.Date;
 import java.util.Locale;
 
-/**
- * Created by philipp on 02/06/16.
- */
 public class DayAxisValueFormatter extends ValueFormatter {
 
     private final BarLineChartBase<?> chart;

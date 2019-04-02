@@ -4,7 +4,6 @@ import android.app.Activity
 import android.app.Application
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.currencyhistory.common.activity.FragmentLifecycleHandler
 import com.example.currencyhistory.util.Logger
 
 class ActivityLifecycleHandler : Application.ActivityLifecycleCallbacks {

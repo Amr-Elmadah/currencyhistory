@@ -9,7 +9,7 @@ import javax.inject.Singleton
 @Module(includes = [ContextModule::class])
 class PrefModule {
 
-	val PrefName = "CURRENCY_SHARED_PREF"
+	private val PrefName = "CURRENCY_SHARED_PREF"
 	@Provides
 	@Singleton
 	fun providesPref(context: Context) =

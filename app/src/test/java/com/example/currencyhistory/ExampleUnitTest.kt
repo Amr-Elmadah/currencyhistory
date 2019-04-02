@@ -12,7 +12,7 @@ import org.junit.Test
 class ExampleUnitTest {
 	@Test
 	fun parseTheResponse() {
-		var json = "{\"base\":\"USD\",\"rates\":{\"EUR\":0.6905600442},\"date\":\"2010-01-12\"}"
+		val json = "{\"base\":\"USD\",\"rates\":{\"EUR\":0.6905600442},\"date\":\"2010-01-12\"}"
 		val obj = Gson().fromJson<Response>(json, Response::class.java)
 		print(obj)
 	}

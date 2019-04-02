@@ -1,4 +1,4 @@
-package com.example.currencyhistory.common.activity
+package com.example.currencyhistory.baseMVVM
 
 import androidx.fragment.app.FragmentManager
 

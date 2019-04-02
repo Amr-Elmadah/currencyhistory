@@ -45,13 +45,13 @@ class MainFragment : BaseFragment() {
 				entries.add(Entry(i.toFloat(), data.rates?.eUR!!.toFloat(), today.time))
 			}
 			val dataSet = LineDataSet(entries, "USD to EUR") // add entries to dataset
-			dataSet.setMode(LineDataSet.Mode.CUBIC_BEZIER)
-			dataSet.setDrawFilled(true);
+			dataSet.mode = LineDataSet.Mode.CUBIC_BEZIER
+			dataSet.setDrawFilled(true)
 
 			val lineData = LineData(dataSet)
 			chart.data = lineData
 			chart.notifyDataSetChanged()
-			chart.invalidate(); // refresh
+			chart.invalidate() // refresh
 
 		})
 	}

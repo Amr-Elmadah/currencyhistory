@@ -22,7 +22,6 @@ import javax.inject.Singleton
 			BaseUrlModule::class,
 			ContextModule::class,
 			CacheModule::class,
-//            RealmModule::class,
 			PrefModule::class,
 			GlideModule::class,
 			GsonModule::class,
