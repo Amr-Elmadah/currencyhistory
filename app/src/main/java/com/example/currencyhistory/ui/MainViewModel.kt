@@ -4,12 +4,11 @@ import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.currencyhistory.dataSource.RepositorySource
-import com.example.currencyhistory.dataSource.pref.AppPreferencesHelper
 import com.example.currencyhistory.dataSource.remoteDataSource.NetworkCallBacks
 import com.example.currencyhistory.model.Response
 import javax.inject.Inject
 
-class MainViewModel @Inject constructor(private val mRepo: RepositorySource, private val mSharedPrf: AppPreferencesHelper) : ViewModel(), LifecycleObserver {
+class MainViewModel @Inject constructor(private val mRepo: RepositorySource) : ViewModel(), LifecycleObserver {
 
 	val currencyList = mutableListOf<Response>()
 	val notifyUpdate = MutableLiveData<Boolean>()

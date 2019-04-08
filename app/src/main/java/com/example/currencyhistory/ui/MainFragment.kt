@@ -29,11 +29,8 @@ class MainFragment : BaseFragment() {
 	}
 
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
 		val today = Calendar.getInstance()
-
 		configureChart()
-
 		for (i in 0 until 8) {
 			viewModel.getRateItem(formatDate(today.time))
 			today.add(Calendar.DAY_OF_WEEK, -1)
@@ -52,7 +49,6 @@ class MainFragment : BaseFragment() {
 			chart.data = lineData
 			chart.notifyDataSetChanged()
 			chart.invalidate() // refresh
-
 		})
 	}
 
