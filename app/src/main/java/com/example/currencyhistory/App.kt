@@ -8,6 +8,7 @@ import com.example.currencyhistory.baseMVVM.ActivityLifecycleHandler
 import com.example.currencyhistory.injection.AppComponent
 import com.example.currencyhistory.injection.DaggerAppComponent
 import com.example.currencyhistory.injection.context.ContextModule
+import com.squareup.leakcanary.LeakCanary
 
 @SuppressLint("ShowToast")
 class App : Application() {
@@ -17,12 +18,14 @@ class App : Application() {
 	override fun onCreate() {
 		super.onCreate()
 		instance = this
-
 		mToast = Toast.makeText(applicationContext, null, Toast.LENGTH_LONG)
-
 		component = DaggerAppComponent.builder().contextModule(ContextModule(this)).build()
 		AppCompatDelegate.setCompatVectorFromResourcesEnabled(true)
 		registerActivityLifecycleCallbacks(ActivityLifecycleHandler())
+		if (LeakCanary.isInAnalyzerProcess(this)) {
+			return
+		}
+		LeakCanary.install(this)
 	}
 
 	fun showToast(text: String) {
