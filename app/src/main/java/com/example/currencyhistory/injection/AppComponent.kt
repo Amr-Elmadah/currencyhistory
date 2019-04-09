@@ -13,7 +13,6 @@ import com.example.currencyhistory.injection.modules.imageLoader.glideModule.Gli
 import com.example.currencyhistory.injection.modules.jsonParser.gsonModule.GsonModule
 import com.example.currencyhistory.injection.modules.okhttpclient.OkhttpClientModule
 import com.example.currencyhistory.injection.modules.retrofitModule.RetrofitModule
-import com.example.currencyhistory.ui.MainViewModel
 import dagger.Component
 import javax.inject.Singleton
 

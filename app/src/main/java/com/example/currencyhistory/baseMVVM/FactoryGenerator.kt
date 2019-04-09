@@ -14,9 +14,8 @@ class FactoryGenerator @Inject constructor(
 	override fun <T : ViewModel?> create(modelClass: Class<T>): T {
 		if (modelClass.isAssignableFrom(modelClass)) {
 			return modelClass.getConstructor(
-					RepositorySource::class.java,
-					AppPreferencesHelper::class.java
-			).newInstance(mRepo, mSharedPrf) as T
+					RepositorySource::class.java
+			).newInstance(mRepo) as T
 		}
 		throw IllegalArgumentException("unexpected model class $modelClass")
 	}

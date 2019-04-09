@@ -15,9 +15,6 @@ import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
 class MainActivityTest {
-
-	//Todo : There's an error in FactoryGenerator with ui testing but I didn't find a solution for it yet.
-
 	@Rule
 	@JvmField
 	var activityRule = ActivityTestRule<MainActivity>(MainActivity::class.java)
@@ -31,6 +28,7 @@ class MainActivityTest {
 	@Throws(Exception::class)
 	fun checkChartIsShown() {
 		Espresso.onView(withId(R.id.chart)).check(ViewAssertions.matches(isDisplayed()))
+		Thread.sleep(5000)
 	}
 
 	@After
