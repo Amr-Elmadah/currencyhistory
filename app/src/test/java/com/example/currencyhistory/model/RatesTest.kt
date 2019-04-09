@@ -1,12 +1,11 @@
-package com.example.currencyhistory
+package com.example.currencyhistory.model
 
-import com.example.currencyhistory.model.Response
 import com.google.gson.Gson
 import org.junit.Assert
 import org.junit.Before
 import org.junit.Test
 
-class RatesUnitTest {
+class RatesTest {
 	private lateinit var json: String
 	private lateinit var obj: Response
 

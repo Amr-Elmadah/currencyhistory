@@ -1,9 +1,9 @@
-package com.example.currencyhistory
+package com.example.currencyhistory.ui
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Lifecycle
+import com.example.currencyhistory.TestLifecycleOwner
 import com.example.currencyhistory.dataSource.RepositorySource
-import com.example.currencyhistory.ui.MainViewModel
 import com.example.currencyhistory.util.formatDate
 import org.junit.Assert
 import org.junit.Before
